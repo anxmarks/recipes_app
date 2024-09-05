@@ -3,12 +3,30 @@ from flet import *
 
 
 
-#color pallet: E09F7D, EF5D60, 553D36, F9FBB2, CEEC97
+#color pallet: E09F7D, EF5D60, 553D36, F9FBB2, CEEC97, #ff7f7f 
 
 def main(page: ft.Page):
     #colors
     BG = '#F5E0B7'
 
+    categories_card = Row(
+        scroll='auto'
+)
+    categories = ['Pastries', 'Cakes', 'Candies', 'Snacks']
+    for i, category in enumerate(categories):
+        categories_card.controls.append(
+             Container(
+            bgcolor='#E57272', height=110, width=170, border_radius=20, padding=15,
+            content=Column(
+                controls=[
+                    Text('5 Recipes'),
+                    Text(category)
+                ]
+            )
+        )
+        )
+            
+        
     first_page_contests = Container(
         content=Column(
             controls=[
@@ -34,8 +52,11 @@ def main(page: ft.Page):
                     color='#553D36'
                 ),
                 Container(
-                    padding=padding.only(top=10, bottom=20)
-                )
+                    padding=padding.only(top=10, bottom=20),
+                    content=categories_card
+                ),
+                Container(height=20),
+                Text("Last Seen")
             ]
         )
     )
