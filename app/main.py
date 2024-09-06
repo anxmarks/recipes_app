@@ -42,10 +42,17 @@ def main(page: ft.Page):
                         )
                     ]
                 ),
-                Container(height=20), 
+                Container(height=5),
+                Image(
+                    src=f"app/assets/images/square_logo.png",
+                    width=350,
+                    height=120,
+                ),
+                Container(height=5), 
                 Text(
                     value='Welcome!',
-                    color='#553D36'
+                    color='#553D36',
+                    size=35
                 ),
                 Text(
                     value='CATEGORIES',
