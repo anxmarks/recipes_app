@@ -1,26 +1,23 @@
-import flet as ft
-from flet import *
-
-
-
+import flet as ft # type: ignore
+from flet import * # type: ignore
 #color pallet: E09F7D, EF5D60, 553D36, F9FBB2, CEEC97, #ff7f7f 
 
 def main(page: ft.Page):
     #colors
     BG = '#F5E0B7'
 
-    categories_card = Row(
+    categories_card = Row( # type: ignore
         scroll='auto'
 )
     categories = ['Pastries', 'Cakes', 'Candies', 'Snacks']
     for i, category in enumerate(categories):
         categories_card.controls.append(
-             Container(
-            bgcolor='#E57272', height=110, width=170, border_radius=20, padding=15,
+            Container( # type: ignore
+            bgcolor='#E57272', height=70, width=170, border_radius=20, padding=15,
             content=Column(
                 controls=[
-                    Text('5 Recipes'),
-                    Text(category)
+                    Text(category,
+                         size = 20)
                 ]
             )
         )
@@ -62,8 +59,14 @@ def main(page: ft.Page):
                     padding=padding.only(top=10, bottom=20),
                     content=categories_card
                 ),
-                Container(height=20),
-                Text("Last Seen")
+                Text(value="OPTIONS",
+                     color='#553D36'),
+                FilledButton(text='ADD NEW RECIPE',
+                             icon="add"),
+                             #color="#4C3228")
+                FilledButton(text='ADD NEW ITEM',
+                             icon="add")
+
             ]
         )
     )
