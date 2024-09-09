@@ -1,5 +1,5 @@
-import flet as ft # type: ignore
-from flet import * # type: ignore
+import flet as ft 
+from flet import *
 #color pallet: E09F7D, EF5D60, 553D36, F9FBB2, CEEC97, #ff7f7f 
 
 def main(page: ft.Page):
@@ -65,6 +65,8 @@ def main(page: ft.Page):
                              icon="add"),
                              #color="#4C3228")
                 FilledButton(text='ADD NEW ITEM',
+                             icon="add"),
+                FilledButton(text='ADD NEW CATEGORIE',
                              icon="add")
 
             ]
