@@ -28,13 +28,7 @@ def login(page: ft.Page) -> None:
         print('Username:', text_username.value)
         print('Password:', text_password.value)
 
-        page.clean()
-        page.add(
-            Row(
-                controls=[Text(value=f'Welcome {text_username.value}', size=20)],
-                alignment=ft.MainAxisAlignment.CENTER
-            )
-        )
+        page.go("/main")
 
     checkbox_signup.on_change = validate
     text_username.on_change = validate

@@ -107,4 +107,4 @@ def main_page(page: ft.Page):
     page.add(container)
 
 
-ft.app(target=main_page)
+#ft.app(target=main_page)
