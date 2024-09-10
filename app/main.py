@@ -5,6 +5,9 @@ from flet import *
 def main(page: ft.Page):
     #colors
     BG = '#F5E0B7'
+    page.window_width = 430
+    page.window_height = 850
+    page.window_resizable = False
 
     categories_card = Row( # type: ignore
         scroll='auto'
