@@ -3,11 +3,11 @@ from flet import *
 from flet_core.control_event import ControlEvent
 #Please, understand that this is a test
 
-def main(page: ft.Page) -> None:
+def login(page: ft.Page) -> None:
     page.title = "Welcome, please sign in"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
-    page.window_width = 400
-    page.window_height = 400
+    page.window_width = 430
+    page.window_height = 850
     page.window_resizable = False
 
     text_username: TextField = TextField(label='Username', text_align=ft.TextAlign.LEFT, width=200)
@@ -55,5 +55,5 @@ def main(page: ft.Page) -> None:
         )
     )
 
-if __name__ == '__main__':
-    ft.app(target=main)
+#if __name__ == '__main__':
+ #   ft.app(target=login)
